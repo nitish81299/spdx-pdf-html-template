@@ -1,31 +1,69 @@
 # spdx-pdf-template
 This is a template for the spdx specifications in the markdown format and will generate cover-page, header, footer and the table of contents for the pdf version of the specifications.
 
-* Clone the spdx-spec repository
+### Clone the spdx-spec repository
 
-    git clone https://github.com/spdx/spdx-spec.git
+  * ``git clone https://github.com/spdx/spdx-spec.git``
     
     and
     
     get the template file from this repository.
 
-* Next you need to install dependencies
+### Next you need to install dependencies
 
-  * Latex: https://en.wikibooks.org/wiki/LaTeX/Installation#Distributions
+  * Latex: 
 
-  * Pandoc: http://pandoc.org/
+    + Debian/Ubuntu: ``apt-get install texlive``
 
-* Copy spdx-latex-template in your latex templates folder and rename the file to .latex 
+    + Windows: The "Basic MiKTeX Installer" is used to set up a standard TeX/LaTeX system and can be downloaded from (https://miktex.org/download)
 
-   extension.
- 
+    + Mac : The current distribution is MacTeX-2019
+      This distribution requires Mac OS 10.12, Sierra, or higher and runs on Intel processors and can be downloaded from (http://www.tug.org/mactex/mactex-download.html) 
+
+
+
+  * Pandoc:
+
+    + Windows: Just use pandoc installer for windows
+     (https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-windows-x86_64.msi)
+
+    + Mac:  You can install pandoc using Homebrew:
+
+         `` brew install pandoc``
+
+         To include pandoc’s citation parser:
+
+         ``brew install pandoc-citeproc``    
+
+    + Linux: 
+
+         Download the binary package for amd64 architecuture from
+          (https://github.com/jgm/pandoc/releases/latest)
+
+     + To install the deb:
+
+         ``sudo dpkg -i $DEB``
+
+         where $DEB is the path to the downloaded deb. This will install the pandoc and pandoc-citeproc executables and man pages.
+      
+         On any distro, you may install from the tarball into $DEST (say, /usr/local/ or $HOME/.local) by doing
+
+         ``tar xvzf $TGZ --strip-components 1 -C $DEST``
+
+         where $TGZ is the path to the downloaded zipped tarball. For Pandoc versions before 2.0, which don’t provide a tarball, try instead
+
+         ``ar p $DEB data.tar.gz | tar xvz --strip-components 2 -C $DEST``
+
+
+
+### Copy spdx-latex-template in your latex templates folder and rename the file to .latex extension.
    Default location of the folder, if not present create one:
 
-   Unix, Linux, macOS: $XDG_DATA_HOME/pandoc/templates or ~/.pandoc/templates/
+   * Unix, Linux, macOS: $XDG_DATA_HOME/pandoc/templates or ~/.pandoc/templates/
 
-   Windows XP: C:\Documents And Settings\USERNAME\Application Data\pandoc\templates
+   * Windows XP: C:\Documents And Settings\USERNAME\Application Data\pandoc\templates
 
-* To include titlepage, header footers you must provide the YAML metadata block at the very starting of the md file content    which you are going to convert.
+### To include titlepage, header footers you must provide the YAML metadata block at the very starting of the md file content    which you are going to convert.
 
 
 ```markdown---
@@ -44,9 +82,7 @@ logo-width: 220
 
 ## Usage
 
-  * Run the following command in the directory where your markdown files are present to create a pdf version of the markdown 
-    along with toc
-
-
-     pandoc example.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents
+  * When all the steps are done, run the following command:
+   
+    ``pandoc example.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents``
 
