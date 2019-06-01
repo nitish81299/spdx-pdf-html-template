@@ -27,6 +27,8 @@ This is a template for the spdx specifications in the markdown format and will g
 
 * To include titlepage, header footers you must provide the YAML metadata block at the very starting of the md file content    which you are going to convert.
 
+
+```markdown---
 ---
 title: "Software Package Data Exchange® (SPDX®) Specifications"
 titlepage: true
@@ -38,6 +40,7 @@ footer-left: "Here comes footer"
 logo: "logo.pdf"
 logo-width: 220
 ...
+```
 
 ## Usage
 
