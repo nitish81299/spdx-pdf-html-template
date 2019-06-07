@@ -98,65 +98,7 @@ $else$
 \usepackage{setspace}
 \setstretch{1.2}
 $endif$
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-$if(mathspec)$
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{unicode-math}
-  \fi
-$else$
-  \usepackage{unicode-math}
-$endif$
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-$if(mainfont)$
-  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$endif$
-$if(sansfont)$
-  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$endif$
-$if(monofont)$
-  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
-$endif$
-$for(fontfamilies)$
-  \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
-$endfor$
-$if(mathfont)$
-$if(mathspec)$
-  \ifxetex
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \else
-    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \fi
-$else$
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-$endif$
-$endif$
-$if(CJKmainfont)$
-  \ifxetex
-    \usepackage{xeCJK}
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-  \fi
-$endif$
-$if(luatexjapresetoptions)$
-  \ifluatex
-    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
-  \fi
-$endif$
-$if(CJKmainfont)$
-  \ifluatex
-    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
-    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-  \fi
-$endif$
-\fi
+
 $if(beamer)$
 $if(theme)$
 \usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
@@ -229,7 +171,7 @@ $else$
   hidelinks,
 $endif$
   breaklinks=true,
-  pdfcreator={LaTeX via pandoc with the Eisvogel template}}
+  pdfcreator={LaTeX via pandoc with the SPDX template}}
 \urlstyle{same} % disable monospaced font for URLs
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
@@ -410,6 +352,35 @@ $if(logo)$
 $endif$
 $endif$
 
+%%
+%% added
+%%
+
+%
+% language specification
+%
+% If no language is specified, use English as the default main document language.
+%
+$if(lang)$$else$
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=english]{babel}
+$if(babel-newcommands)$
+  $babel-newcommands$
+$endif$
+\else
+  $if(mainfont)$
+  $else$
+ 
+  \renewcommand*\familydefault{\sfdefault}
+  $endif$
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+$for(polyglossia-otherlangs)$
+  \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
+$endfor$
+\fi
+$endif$
 
 %
 % for the background color of the title page
@@ -552,8 +523,8 @@ $if(listings)$
 \definecolor{listing-comment}{HTML}{8E8E8E}
 \definecolor{listing-javadoc-comment}{HTML}{006CA9}
 
-\lstdefinestyle{eisvogel_listing_style}{
-  language         = java,
+\lstdefinestyle{listing_style}{
+  language         = python,
 $if(listings-disable-line-numbers)$
   xleftmargin      = 0.6em,
   framexleftmargin = 0.4em,
@@ -600,7 +571,7 @@ $endif$
   {…}{{\ldots}}1 {≥}{{>=}}1 {≤}{{<=}}1 {„}{{\glqq}}1 {“}{{\grqq}}1
   {”}{{''}}1
 }
-\lstset{style=eisvogel_listing_style}
+\lstset{style=listing_style}
 
 \lstdefinelanguage{XML}{
   morestring      = [b]",
@@ -623,7 +594,7 @@ $if(disable-header-and-footer)$
 $else$
 \usepackage{fancyhdr}
 
-\fancypagestyle{eisvogel-header-footer}{
+\fancypagestyle{header-footer}{
   \fancyhead{}
   \fancyfoot{}
   \lhead[$if(header-right)$$header-right$$else$$date$$endif$]{$if(header-left)$$header-left$$else$$title$$endif$}
@@ -635,7 +606,14 @@ $else$
   \renewcommand{\headrulewidth}{0.4pt}
   \renewcommand{\footrulewidth}{0.4pt}
 }
-\pagestyle{eisvogel-header-footer}
+\pagestyle{header-footer}
+\fancyhead[CE]{\leftmark}
+\fancyhead[CO]{\leftmark}
+\fancyhead[RO]{\thepage}
+\fancyfoot[CE]{\leftmark} 
+\fancyfoot[CO]{\leftmark} 
+\fancyfoot[RO]{\thepage} 
+
 $endif$
 
 %%
