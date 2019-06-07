@@ -7,7 +7,7 @@ This is a template for the spdx specifications in the markdown format and will g
     
     and
     
-    get the template file from this repository.
+    get the template file from this repository along with the logo and place it in the same directory where markdown files       are present on your local machine.
 
 ### Next you need to install dependencies
 
@@ -84,5 +84,5 @@ logo-width: 220
 
   * When all the steps are done, run the following command:
    
-    ``pandoc example.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents``
+    ``pandoc example.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents --listings``
 
