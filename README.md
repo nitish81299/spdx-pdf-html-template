@@ -61,7 +61,7 @@ This is a template for the spdx specifications in the markdown format and will g
 
    * Unix, Linux, macOS: $XDG_DATA_HOME/pandoc/templates or ~/.pandoc/templates/
 
-   * Windows XP: C:\Documents And Settings\USERNAME\Application Data\pandoc\templates
+   * Windows Vista or later: C:\Users\USERNAME\AppData\Roaming\pandoc\templates
 
 ### To include titlepage, header footers you must provide the YAML metadata block at the very starting of the md file content    which you are going to convert.
 
