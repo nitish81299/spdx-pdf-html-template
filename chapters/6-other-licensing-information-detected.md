@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # 6 Other Licensing Information Detected
 
 This section is used for any detected, declared or concluded licenses that are NOT on the SPDX License List. For the most up-to-date version of the list see: http://spdx.org/licenses/. The SPDX License List can also be found here in [Appendix I](#Appendix-I-SPDX-License-List).
@@ -8,7 +12,7 @@ Fields:
 
 ## 6.1 License Identifier <a name="6.1"></a>
 
-**6.1.1** Purpose: Provide a locally unique identifier to refer to licenses that are not found on the SPDX License List. This unique identifier can then be used in the packages and files sections of the SPDX file (sections [3](#3-Package-Information) and [4](#File-Information), respectively).
+**6.1.1** Purpose: Provide a locally unique identifier to refer to licenses that are not found on the SPDX License List. This unique identifier can then be used in the packages and files sections of the SPDX file (sections [3](#Package-Information) and [4](#File-Information), respectively).
 
 **6.1.2** Intent: Create a human readable short form license identifier for a license not on the SPDX License List. This identifier should be unique within the SPDX file. In previous versions of SPDX, the references were required to be sequential numbers, but as of version 1.2, creators may specify references that are easier for humans to remember and mentally map.
 

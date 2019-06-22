@@ -744,7 +744,8 @@ $else$
 $if(colorlinks)$
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
 $endif$
-\setcounter{tocdepth}{$if(toc-depth)$$toc-depth$$else$3$endif$}
+\setcounter{tocdepth}{1}
+\renewcommand{\contentsname}{Table of Contents}
 \tableofcontents
 \thispagestyle{empty}
 \cleardoublepage

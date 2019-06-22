@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # 7 Relationships between SPDX Elements{#Relationships-between-SPDX-Elements}
 
 ## 7.1 Relationship <a name="7.1"></a>

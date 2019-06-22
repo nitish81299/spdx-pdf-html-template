@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # 9 Review Information (deprecated)
 
 The review information section is included for compatibility with SPDX 1.2, and is deprecated since SPDX 2.0. Any review information should use an Annotation (as described in [section 8](#Annotations)) with an annotation type of `annotationType_review`.

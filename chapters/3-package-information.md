@@ -1,4 +1,8 @@
-# 3 Package Information{#3-Package-Information}
+---
+header-left: "Header"
+footer-left: "Footer"
+...
+# 3 Package Information{#Package-Information}
 
 One instance of the Package Information is required per package being described. A package can contain sub-packages, but the information in this section is a reference to the entire contents of the package listed. Starting with SPDX 2.0, it is not necessary to have a package wrapping a set of files.
 
@@ -644,7 +648,7 @@ If the Concluded License is not the same as the [Declared License](#section3.15)
 
 where:
 
-`<SPDX License Expression>` is a valid SPDX License Expression as defined in [Appendix IV](appendix-IV-SPDX-license-expressions.md).
+`<SPDX License Expression>` is a valid SPDX License Expression as defined in [Appendix IV](#SPDX-License-Expressions).
 
 **3.13.5** Tag: `PackageLicenseConcluded:`
 
@@ -743,7 +747,7 @@ The options to populate this field are limited to:
 
     (ii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
 
-**3.15.2** Intent: This is simply the license identified in text in one or more files (for example COPYING file) in the source code package. This field is not intended to capture license information obtained from an external source, such as the package website. Such information can be included in Concluded License [(section 3.13)](#3.13). This field may have multiple Declared Licenses, if multiple licenses are declared at the package level.
+**3.15.2** Intent: This is simply the license identified in text in one or more files (for example COPYING file) in the source code package. This field is not intended to capture license information obtained from an external source, such as the package website. Such information can be included in Concluded License [(section 3.13)](#section3.13). This field may have multiple Declared Licenses, if multiple licenses are declared at the package level.
 
 **3.15.3** Cardinality: Mandatory, one.
 

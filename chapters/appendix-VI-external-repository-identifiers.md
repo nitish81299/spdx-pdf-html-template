@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # Appendix VI: External Repository Identifiers{#Appendix-VI}
 
 ***

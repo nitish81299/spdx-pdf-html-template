@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # 2 Document Creation Information
 
 One instance is required for each SPDX file produced.  It provides the necessary information for forward and backward compatibility for processing tools.
@@ -84,7 +88,7 @@ Example:
     ...
     </spdx:SpdxDocument>
 
-## 2.4 Document Name <a name="2.4"></a>{#section2.4}
+## 2.4 Document Name <a name="2.5"></a>{#section2.4}
 
 **2.4.1** Purpose: Identify name of this document as designated by creator.
 
@@ -124,7 +128,7 @@ The URI must be unique for the SPDX document including the specific version of t
 
 * `CreatorWebsite` is a website hosted by the creator of the document. (e.g. an SPDX document provided by SPDX would be spdx.org)
 * `PathToSpdx` is a path to where SPDX documents are stored on the website (e.g. /spdx/spdxdocs)
-* `DocumentName` is a name given to the SPDX Document itself, typically the (set of) package name(s) followed by the version. [(see section 2.4)](#section2.4).
+* `DocumentName` is a name given to the SPDX Document itself, typically the (set of) package name(s) followed by the version. [see section 2.4](#section2.4).
 * `UUID` is a [universally unique identifier][URI]. The UUID could be a version 4 random UUID which can be generated from the [Online UUID Generator][uuid-gen] or a version 5 UUID generated from a sha1 checksum known to be unique for this specific SPDX document version.
 * If the creator does not own their own website, a default SPDX CreatorWebsite and PathToSpdx can be used `spdx.org/spdxdocs`. Note that the SPDX documents are not currently stored or accessible on this website. The URI is only used to create a unique ID following the above conventions.
 
