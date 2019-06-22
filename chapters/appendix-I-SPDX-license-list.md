@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # Appendix I: SPDX License List{#Appendix-I-SPDX-License-List}
 
 The SPDX License List is a list of commonly found licenses and exceptions used for open source and other collaborative software. The purpose of the SPDX License List is to enable easy and efficient identification of such licenses and exceptions in an SPDX document (or elsewhere). The SPDX License List includes a standardized short identifier, full name for each license, vetted license text, other basic information, and a canonical permanent URL for each license and exception. By providing a short identifier, users can efficiently refer to a license without having to redundantly reproduce the full license. License exceptions can be used with the License Expression Syntax operator, "WITH" to create a license with an exception.

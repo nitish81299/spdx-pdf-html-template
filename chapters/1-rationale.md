@@ -1,13 +1,6 @@
 ---
-title: "Software Package Data Exchange® (SPDX®) Specifications"
-titlepage: true
-titlepage-text-color: "123F66"
-titlepage-rule-color: "213E4C"
-titlepage-rule-height: 2
 header-left: "Header"
 footer-left: "Footer"
-logo: "logo.pdf"
-logo-width: 220
 ...
 # 1 Rationale
 
@@ -89,7 +82,7 @@ Companies and organizations (collectively “Organizations”) are widely using 
 
 ## 1.8 Differences from SPDX Specification 2.0 <a name="1.8"></a>
 
-**1.8.1** Snippets have been added to allow a portion of a file to be identified as having different properties from the file it resides in. The use of snippets is completely optional and it is not manditory for snippets to be identified. See [section 5 snippet information ](#Snippet) for further details on the fields available to describe snippets.
+**1.8.1** Snippets have been added to allow a portion of a file to be identified as having different properties from the file it resides in. The use of snippets is completely optional and it is not manditory for snippets to be identified. See [section 5 snippet information ](#snippet-information) for further details on the fields available to describe snippets.
 
 **1.8.2** External Packages can now be refered to in SPDX documents. When there is no SPDX file information available to document the content of these external packages, then the `filesAnalyzed` attribute on a package should be set to false. See [section 3.8](#section3.8) Files Analyzed for more information.
 

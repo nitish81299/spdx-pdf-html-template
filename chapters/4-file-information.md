@@ -1,3 +1,7 @@
+---
+header-left: "Header"
+footer-left: "Footer"
+...
 # 4 File Information{#File-Information}
 
 One instance of the File Information is required for each file in the software package. It provides important meta information about a given file including licenses and copyright. Starting with SPDX 2.0, it is not necessary to have a package wrapping a set of files.
