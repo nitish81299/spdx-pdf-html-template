@@ -1,13 +1,14 @@
 ---
-title: "Software Package Data Exchange® (SPDX®) Specifications"
+title: "Software Package Data Exchange (SPDX®)"
+subtitle: "Specification Version 2.1.1"
 titlepage: true
 titlepage-text-color: "123F66"
 titlepage-rule-color: "213E4C"
-titlepage-rule-height: 2
-header-left: "Header"
-footer-left: "Footer"
+titlepage-rule-height: 0
+header-left: "Software Package Data Exchange Specification - Version 2.1.1"
+footer-left: "Copyright 2010-2019 Linux Foundation and its Contributors. Licensed under [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/) .All other rights are expressly reserved."
 logo: "logo.pdf"
-logo-width: 220
+logo-width: 180
 ...
 # The Software Package Data Exchange (SPDX®) Specification Version 2.1.1
 

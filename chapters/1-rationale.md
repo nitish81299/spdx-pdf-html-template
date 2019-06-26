@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # 1 Rationale
 
 ## 1.1 Charter <a name="1.1"></a>

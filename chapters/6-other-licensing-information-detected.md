@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # 6 Other Licensing Information Detected
 
 This section is used for any detected, declared or concluded licenses that are NOT on the SPDX License List. For the most up-to-date version of the list see: http://spdx.org/licenses/. The SPDX License List can also be found here in [Appendix I](#Appendix-I-SPDX-License-List).
