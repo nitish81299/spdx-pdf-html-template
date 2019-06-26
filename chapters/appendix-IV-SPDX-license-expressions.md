@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # Appendix IV: SPDX License Expressions{#SPDX-License-Expressions}
 
 ## Overview

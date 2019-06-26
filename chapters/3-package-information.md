@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # 3 Package Information{#Package-Information}
 
 One instance of the Package Information is required per package being described. A package can contain sub-packages, but the information in this section is a reference to the entire contents of the package listed. Starting with SPDX 2.0, it is not necessary to have a package wrapping a set of files.

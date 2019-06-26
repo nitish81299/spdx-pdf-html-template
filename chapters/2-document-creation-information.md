@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # 2 Document Creation Information
 
 One instance is required for each SPDX file produced.  It provides the necessary information for forward and backward compatibility for processing tools.

@@ -1,7 +1,3 @@
----
-header-left: "Header"
-footer-left: "Footer"
-...
 # 8 Annotations{#Annotations}
 
 ## 8.1 Annotator <a name="8.1"></a>
