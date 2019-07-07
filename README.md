@@ -1,5 +1,5 @@
 # spdx-pdf-template
-This is a template for the spdx specifications in the markdown format and will generate cover-page, header, footer and the table of contents for the pdf version of the specifications.
+This is a template for the SPDX specifications in the markdown format and will generate the PDF version as well as the HTML version of the specifications with cover-page, header, footer and the table of contents.
 
 ### Clone the spdx-spec repository
 
@@ -15,17 +15,16 @@ This is a template for the spdx specifications in the markdown format and will g
 
     + Debian/Ubuntu: ``apt-get install texlive``
 
-    + Windows: The "Basic MiKTeX Installer" is used to set up a standard TeX/LaTeX system and can be downloaded from (https://miktex.org/download)
+    + Windows: The "Basic MiKTeX Installer" is used to set up a standard TeX/LaTeX system and can be downloaded from [here.](https://miktex.org/download)
 
     + Mac : The current distribution is MacTeX-2019
-      This distribution requires Mac OS 10.12, Sierra, or higher and runs on Intel processors and can be downloaded from (http://www.tug.org/mactex/mactex-download.html) 
+      This distribution requires Mac OS 10.12, Sierra, or higher and runs on Intel processors and can be downloaded from [here.](http://www.tug.org/mactex/mactex-download.html) 
 
 
 
   * Pandoc:
 
-    + Windows: Just use pandoc installer for windows
-     (https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-windows-x86_64.msi)
+    + Windows: Just use pandoc installer for windows from [here.](https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-windows-x86_64.msi)
 
     + Mac:  You can install pandoc using Homebrew:
 
@@ -37,8 +36,7 @@ This is a template for the spdx specifications in the markdown format and will g
 
     + Linux: 
 
-         Download the binary package for amd64 architecuture from
-          (https://github.com/jgm/pandoc/releases/latest)
+         Download the binary package for amd64 architecuture from [here.](https://github.com/jgm/pandoc/releases/latest)
 
      + To install the deb:
 
@@ -56,7 +54,7 @@ This is a template for the spdx specifications in the markdown format and will g
 
 
 
-### Copy spdx-latex-template in your latex templates folder and rename the file to .latex extension.
+### Copy spdx-pdf-template in your latex templates folder and rename the file to .latex extension.
    Default location of the folder, if not present create one:
 
    * Unix, Linux, macOS: $XDG_DATA_HOME/pandoc/templates or ~/.pandoc/templates/
@@ -80,7 +78,7 @@ logo-width: 220
 ...
 ```
 
-## Usage
+## Usage for PDF
 
   * When all the steps are done, run the following command:
    
@@ -90,6 +88,12 @@ logo-width: 220
     
   * To make a single pdf of all the markdown files serially, run :
 
-    ``pandoc index.md 1-rationale.md 2-document-creation-information.md 3-package-information.md 4-file-information.md 5-snippet-information.md 6-other-licensing-information-detected.md 7-relationships-between-SPDX-elements.md 8-annotations.md 9-review-information-deprecated.md appendix-I-SPDX-license-list.md appendix-II-license-matching-guidelines-and-templates.md appendix-III-RDF-data-model-implementation-and-identifier-syntax.md appendix-IV-SPDX-license-expressions.md appendix-V-using-SPDX-short-identifiers-in-source-files.md appendix-VI-external-repository-identifiers.md appendix-VII-creative-commons-attribution-license-3.0-unported.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents --listings --pdf-engine=xelatex --file-scope
-``
+    ``pandoc index.md 1-rationale.md 2-document-creation-information.md 3-package-information.md 4-file-information.md 5-snippet-information.md 6-other-licensing-information-detected.md 7-relationships-between-SPDX-elements.md 8-annotations.md 9-review-information-deprecated.md appendix-I-SPDX-license-list.md appendix-II-license-matching-guidelines-and-templates.md appendix-III-RDF-data-model-implementation-and-identifier-syntax.md appendix-IV-SPDX-license-expressions.md appendix-V-using-SPDX-short-identifiers-in-source-files.md appendix-VI-external-repository-identifiers.md appendix-VII-creative-commons-attribution-license-3.0-unported.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents --listings --pdf-engine=xelatex --file-scope``
 
+## Usage for HTML
+
+### NOTE: Move the **spdx-html-template** into pandoc templates folder same as the latex template.
+
+  * To generate the HTML run:
+
+  ``pandoc -s index.md 1-rationale.md 2-document-creation-information.md 3-package-information.md 4-file-information.md 5-snippet-information.md 6-other-licensing-information-detected.md 7-relationships-between-SPDX-elements.md 8-annotations.md 9-review-information-deprecated.md appendix-I-SPDX-license-list.md appendix-II-license-matching-guidelines-and-templates.md appendix-III-RDF-data-model-implementation-and-identifier-syntax.md appendix-IV-SPDX-license-expressions.md appendix-V-using-SPDX-short-identifiers-in-source-files.md appendix-VI-external-repository-identifiers.md appendix-VII-creative-commons-attribution-license-3.0-unported.md -o example.html --from markdown --file-scope --toc --toc-depth=1 --template=spdx-html-template -H header.html -B footer.html``
