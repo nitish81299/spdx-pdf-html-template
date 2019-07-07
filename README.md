@@ -89,10 +89,11 @@ logo-width: 220
   * To make a single pdf of all the markdown files serially, run :
 
     ``pandoc index.md 1-rationale.md 2-document-creation-information.md 3-package-information.md 4-file-information.md 5-snippet-information.md 6-other-licensing-information-detected.md 7-relationships-between-SPDX-elements.md 8-annotations.md 9-review-information-deprecated.md appendix-I-SPDX-license-list.md appendix-II-license-matching-guidelines-and-templates.md appendix-III-RDF-data-model-implementation-and-identifier-syntax.md appendix-IV-SPDX-license-expressions.md appendix-V-using-SPDX-short-identifiers-in-source-files.md appendix-VI-external-repository-identifiers.md appendix-VII-creative-commons-attribution-license-3.0-unported.md -o example.pdf --from markdown --template spdx-pdf-template --table-of-contents --listings --pdf-engine=xelatex --file-scope``
+    
 
 ## Usage for HTML
 
-### NOTE: Move the **spdx-html-template** into pandoc templates folder same as the latex template.
+**NOTE**: Move the **spdx-html-template** into pandoc templates folder same as the latex template.
 
   * To generate the HTML run:
 
