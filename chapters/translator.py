@@ -5,8 +5,8 @@ How to use:
 
 1. Change the filenames which to be converted in the main function in inputFile and 
    outputFile and place them in the same directory with the script for easy use.
-2. In line 28 change the destination language according to choice.
-3. In line 36 do same as step 1 in the main function.
+2. Change the dest value according to the preferred language.
+3. And for "main" in the end of the script, do same as step 1 in the main function.
 4. Now run the script with python.
 5. A new file is created with the name you suggested.
 6. Then, run the file with pandoc for its format conversion in PDf or HTMl using 
