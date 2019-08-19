@@ -6,7 +6,7 @@ titlepage-text-color: "123F66"
 titlepage-rule-color: "213E4C"
 titlepage-rule-height: 0
 header-left: "Software Package Data Exchange Specification - Version 2.1.1"
-footer-left: "Copyright 2010-2019 Linux Foundation and its Contributors. Licensed under [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/) .All other rights are expressly reserved."
+footer-center: "Copyright 2010-2019 Linux Foundation and its Contributors. Licensed under [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/) .All other rights are expressly reserved."
 logo: "logo.pdf"
 logo-width: 180
 ...
