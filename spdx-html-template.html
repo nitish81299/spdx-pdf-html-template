@@ -23,6 +23,7 @@ $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 
   <style type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/github.css" media="screen" />
 @charset "UTF-8";
 
   </style>
@@ -40,7 +41,7 @@ $highlighting-css$
 $endif$
 
 $for(css)$
- <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  <link rel="stylesheet" href="$css$">
 $endfor$
 
 $if(math)$
@@ -84,7 +85,7 @@ $endif$
 </header>
 $endif$
 $if(logo)$
-<img src="img/logo.png" width="350" height="500" class="image">
+<img src="/home/nitish81299/dev/GSOC/spdx-spec-copy/chapters/logo.png" width="350" height="500" class="image">
 $endif$
 
 $if(toc)$
