@@ -544,15 +544,15 @@ $if(listings)$
 %
 % listing colors
 %
-\definecolor{listing-background}{HTML}{F7F7F7 }
+\definecolor{listing-background}{HTML}{f7f3e6}
 \definecolor{listing-rule}{HTML}{B3B2B3}
-\definecolor{listing-numbers}{HTML}{B3B2B3}
+\definecolor{listing-numbers}{HTML}{000000}
 \definecolor{listing-text-color}{HTML}{000000}
-\definecolor{listing-keyword}{HTML}{435489}
-\definecolor{listing-identifier}{HTML}{435489}
-\definecolor{listing-string}{HTML}{00999A}
-\definecolor{listing-comment}{HTML}{8E8E8E}
-\definecolor{listing-javadoc-comment}{HTML}{006CA9}
+\definecolor{listing-keyword}{HTML}{000000}
+\definecolor{listing-identifier}{HTML}{000000}
+\definecolor{listing-string}{HTML}{000000}
+\definecolor{listing-comment}{HTML}{000000}
+\definecolor{listing-javadoc-comment}{HTML}{000000}
 
 \lstdefinestyle{listing_style}{
   language         = python,
@@ -567,6 +567,7 @@ $endif$
   backgroundcolor  = \color{listing-background},
   basicstyle       = \footnotesize,
   % print whole listing small
+  framerule        = 2pt,
   breaklines       = true,  
   belowcaptionskip = 1\baselineskip,
   keepspaces       = true,
@@ -630,10 +631,10 @@ $else$
   \fancyfoot{}
   \lhead[$if(header-right)$$header-right$$else$$date$$endif$]{$if(header-left)$$header-left$$else$$title$$endif$}
   \chead[$if(header-center)$$header-center$$else$$endif$]{$if(header-center)$$header-center$$else$$endif$}
-  \rhead[$if(header-left)$$header-left$$else$$title$$endif$]{$if(header-right)$$header-right$$else$$date$$endif$}
+  \rhead[$if(header-left)$$header-left$$else$$title$$endif$]{$if(header-right)$$header-right$$else$$date$\thepage$endif$}
   \lfoot[$if(footer-right)$$footer-right$$else$\thepage$endif$]{$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$}
   \cfoot[$if(footer-center)$$footer-center$$else$$endif$]{$if(footer-center)$$footer-center$$else$$endif$}
-  \rfoot[$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$]{$if(footer-right)$$footer-right$$else$\thepage$endif$}
+  \rfoot[$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$]{$if(footer-right)$$footer-right$$else$$endif$}
   \renewcommand{\headrulewidth}{0.4pt}
   \renewcommand{\footrulewidth}{0.4pt}
 }
